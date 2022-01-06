@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row">
+        <div class="card" *ngFor="let teacher of teachers" style="width: 25rem; height: 35rem;" >
+            <img class="rounded mx-auto d-block" [src]="teacher.image" alt="Card image cap" style="height: 250px; width: 200px; ">
+            <div class="card-body"  class="rounded mx-auto d-block" >
+                <h5 class="card-title">{{teacher.fullName}}</h5>
+                <hr />
+                <p class="card-text">Age: {{teacher.age}}</p>
+                <p class="card-text">From: {{teacher.city}}</p>
+                <p class="card-text">Years of Experience: {{teacher.seniority}}</p>
+                <p>Profession: {{teacher.subject}}</p>
+                <p>Month Salary: {{teacher.numOfHours * teacher.selery  | currency}}</p>
+                <button  (click)="goToEdit(teacher.id)" class="btn btn-info">Edit</button>
+            </div>
+        </div>
+    </div>
+</div>

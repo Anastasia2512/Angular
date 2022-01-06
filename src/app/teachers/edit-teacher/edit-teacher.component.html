@@ -1,0 +1,44 @@
+<div class="card border-secondary " style="max-width: 45rem;margin-left: 400px;">
+    <div class="row" style="margin-left: 100px;">
+       <form (submit)="submit()">
+         <div class="row">
+            <div class="form-group col-md-5">
+               <label class="form-label" >Full Name</label>
+               <input name="fullName" class="form-control" [(ngModel)]="teacher.fullName" style="width: 250px;">
+             </div>
+             <div class="col">
+                <label class="form-label">Age</label>
+                <input name="age" class="form-control" [(ngModel)]="teacher.age" style="width: 100px;" >
+              </div>
+         </div>
+          <div class="mb-3">
+             <label class="form-label">City</label>
+             <input name="city" class="form-control" [(ngModel)]="teacher.city" style="width: 500px;">
+           </div>
+           <div class="row">
+          <div class="form-group col-md-2">
+             <label class="form-label">Years of Experience</label>
+             <input name="seniority" class="form-control" [(ngModel)]="teacher.seniority" style="width: 100px;">
+           </div>
+         <div class="form-group col-md-2">
+            <label class="form-label">Hours Per Month</label>
+            <input name="numOfHours" class="form-control" [(ngModel)]="teacher.numOfHours" style="width: 100px;">
+          </div>
+         <div class="form-group col-md-1">
+            <label class="form-label">Hour Salary</label>
+            <input name="selery" class="form-control" [(ngModel)]="teacher.selery" style="width: 100px;">
+         </div>
+      </div>
+          <div class="mb-3">
+             <label class="form-label">Profession</label>
+             <div class="row">
+                <div class="col-3" *ngFor="let subject of teacher.subject; let i = index">
+                   <input [name]="teacher.subject[i]" class="form-control" [(ngModel)]="teacher.subject[i]">
+                </div>
+             </div>
+          </div>
+          <button type="submit" style="background-color: cornflowerblue;" class="rounded mx-auto d-block">Save</button>
+        </form>
+    </div>
+ </div>
+ 
