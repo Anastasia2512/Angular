@@ -1,0 +1,22 @@
+<div class="card border-secondary " style="max-width: 45rem;">
+    <div class="row">
+        <form (submit)="submit()">
+            <div class="row">
+                <div class="form-group col-md-5">
+                    <label class="form-label">Full Name</label>
+                    <input name="fullName" class="form-control" [(ngModel)]="student.fullName" style="width: 250px;">
+                </div>
+                <div class="col">
+                    <label class="form-label">Age</label>
+                    <input name="age" class="form-control" [(ngModel)]="student.age" style="width: 100px;">
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">City</label>
+                <input name="city" class="form-control" [(ngModel)]="student.city" style="width: 500px;">
+            </div>
+            <button type="submit" style="background-color: cornflowerblue;"
+                class="rounded mx-auto d-block">Save</button>
+        </form>
+    </div>
+</div>
